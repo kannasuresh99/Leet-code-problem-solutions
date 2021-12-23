@@ -1,0 +1,7 @@
+Algorithms
+	-- Simply recursive algorithms
+	-- Divide and Conquer algorithms
+	-- Dynamic programming algorithms
+	-- Greedy algorithms
+	-- Brute force algorithms
+	-- Randomized algorithms
