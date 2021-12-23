@@ -1,0 +1,18 @@
+Data structures
+	-- Primitive
+		-- Integer
+		-- Float
+		-- Character
+		-- String
+		-- Boolean
+	-- Non-Primitive
+		-- Linear
+			-- Static
+				-- Arrays
+			-- Dynamic
+				-- Linked List
+				-- Stack
+				-- Queue
+		-- Non-Linear
+			-- Trees
+			-- graphs
