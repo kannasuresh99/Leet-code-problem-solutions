@@ -17,19 +17,13 @@ class Solution:
         result = ''
         carry_on = None
         if len(a) > len(b):
-            limiting_string = b
             string_starting_index = len(a) - len(b)
-            sum_prefix = a[:string_starting_index]
-            a = a[string_starting_index:]
+            b = '0'*string_starting_index + b
         elif len(b) > len(a):
-            limiting_string = a
             string_starting_index = len(b) - len(a)
-            sum_prefix = b[:string_starting_index]
-            b = b[string_starting_index:]
-        elif len(a) == len(b):
-            limiting_string = a
-            sum_prefix = None
-        for i in range(len(limiting_string)-1,-1,-1): 
+            a = '0'*string_starting_index + a
+
+        for i in range(len(a)-1,-1,-1): 
             if carry_on:
                 sum_ = self.getBinarySum(a[i],b[i])
                 sum_ = self.getBinarySum(sum_,carry_on)
@@ -52,26 +46,8 @@ class Solution:
                 carry_on = None
             result = sum_ + result
 
-        if sum_prefix:
-            if carry_on:
-                result = result [1:]
-                while carry_on:
-                    if len(sum_prefix) == 1:
-                        sum_ = self.getBinarySum(sum_prefix[-1],carry_on)
-                        result = sum_ + result
-                        return result
-                    else:
-                        sum_ = self.getBinarySum(sum_prefix[-1],carry_on)
-                        if sum_ == '10':
-                            sum_ = '0'
-                            result = sum_ + result
-                            carry_on = '1'
-                            sum_prefix = sum_prefix[:-1]
-                        else:
-                            result = sum_ + result
-                            sum_prefix = sum_prefix[:-1]
-                            result = sum_prefix + result
-                            carry_on = None
-            else:
-                result = sum_prefix + result
         return result
+
+res = Solution()
+result = res.addBinary("1111","11")
+print(result)
