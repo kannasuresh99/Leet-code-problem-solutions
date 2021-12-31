@@ -1,0 +1,32 @@
+Big-O notation is a way to measure the performance of an algorithm
+
+Examples:
+    O(1) - Accessing a element in an array
+    O(N) - Looping through an array
+    O(N**N) - Looking at every index of an array twice
+    O(LogN) - Find an element in an sorted array
+    O(2**N) - Double recursion in fibonacci
+
+Rules to measure time complexity of a code using Big-O notation:
+    Rule 1: Any assignment statement and if statements that are executed once regardless of the size of the problem has a 
+            time complexity of O(1)
+    Rule 2: A simple "for" loop (0 to n) without any internal loops has a 
+            time complexity of O(N)
+    Rule 3: A nested loop of same type has a 
+            time complexity of O(N**2)
+    Rule 4: A loop in which the controlling parameter is divided by two has a 
+            time complexity of O(logN)
+    Rule 5: A recursive function where it is called only once has a
+            time complexity of O(N)
+    Rule 6: A recursive function where it is called only once but the controlling number is divided by a factor then it has a
+            time complexity of O(logN)
+    Rule 7: A recursive function where it is called more than once has a
+            time complexity of O(branches**N)
+            For eg.) A function calling itself twice - O(2**N)
+                     A function calling itself thrice - O(3**N)
+    Rule 8: A nested for loop with two different arrays has a
+            time complexity of O(A*B),
+                where A = len(array1)
+                      B = len(array2)
+    Rule 9: When dealing with multiple statements just add all these up and pick up the term with greater value and drop the constants
+
