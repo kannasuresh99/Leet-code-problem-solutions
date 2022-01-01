@@ -1,0 +1,20 @@
+Arrays:
+    Definition:
+        In computer science, an array data structure, or simply an array, is a data structure consisting of a collection of 
+        elements, each identified by at least one array index or key.
+    Criteria:
+        1. Arrays can store a data of specific type
+        2. Elements of an array are located in continuous order
+        3. Each element of an array has a unique index
+        4. The size of an array is pre-defined and they cannot be modified.
+    Types:
+        1. Single dimensional arrays
+        2. Multi dimensional arrays
+        
+When to use a array?
+    1. To store multiple values of same data type
+    2. Random access a element in an array
+
+When to avoid using a array?
+    1. To store values of different data-types
+    2. Array reserves a specific space in the memory, it sometimes affects the performance of the application.

@@ -28,5 +28,13 @@ Rules to measure time complexity of a code using Big-O notation:
             time complexity of O(A*B),
                 where A = len(array1)
                       B = len(array2)
-    Rule 9: When dealing with multiple statements just add all these up and pick up the term with greater value and drop the constants
+    Rule 9: Inserting an element at the beginning or middle of the array has a
+            time complexity of O(N)
+    Rule 10: Inserting an element at the end of the array has a
+             time complexity of O(1)
+    Rule 11: Inserting an row or column at the beginning or middle of a two dimensional array has a
+             time complexity of O(M*N),
+                where M = number of rows
+                      N - number of columns
+    Rule 12: When dealing with multiple statements just add all these up and pick up the term with greater value and drop the constants
 
