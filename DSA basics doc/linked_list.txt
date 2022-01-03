@@ -1,0 +1,19 @@
+Linked List:
+    Definition:
+        A linked list is a linear collection of data elements whose order is not given by their physical placement in memory. 
+        Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together 
+        represent a sequence.
+    
+    Types:
+        1. Singly Linked List
+        2. Doubly Linked List
+        3. Circularly Single Linked List
+        4. Circularly Double Linked List
+
+Why we use linked-lists instead of array?
+    1. Elements of linked-lists are independent objects
+    2. Unlike array the size of the linked-list is not pre-defined
+    3. Insertion and removal of elements are very efficient and less memory consuming in linked-lists.
+
+Down sides of linked-lists:
+    1. Random accessing a element is not possible in linked lists, we need to iterate through sequentially to find a element.
