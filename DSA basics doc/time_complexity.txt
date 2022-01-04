@@ -36,5 +36,9 @@ Rules to measure time complexity of a code using Big-O notation:
              time complexity of O(M*N),
                 where M = number of rows
                       N - number of columns
-    Rule 12: When dealing with multiple statements just add all these up and pick up the term with greater value and drop the constants
+    Rule 12: Inserting a new node into an linkedlist has a
+             time complexity of O(1)
+    Rule 13: Inserting a new node into an linkedlist has a
+             space complexity of O(1)
+    Rule 14: When dealing with multiple statements just add all these up and pick up the term with greater value and drop the constants
 
