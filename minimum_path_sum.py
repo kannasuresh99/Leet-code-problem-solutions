@@ -1,6 +1,4 @@
-from unittest import result
-
-
+#my solution
 class Solution:
     def minPathSum(self, grid) -> int:
         for i in range(0,len(grid)):
