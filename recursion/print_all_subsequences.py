@@ -17,5 +17,5 @@ def printSubsequences(arr, subseq_arr, idx, n):
     #print("index being passed for 2nd call: ", idx+1, subseq_arr)
     printSubsequences(arr, subseq_arr, idx+1, n)
 
-arr = [3, 1, 2]
-printSubsequences(arr, [], 0, 3)
+arr = [3, 1, 2, 2]
+printSubsequences(arr, [], 0, 4)

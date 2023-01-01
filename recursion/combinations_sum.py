@@ -1,19 +1,22 @@
 class Solution:
     def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:
         result = []
-        def combSum(index, candidates, target, subseq_arr):
-            if index == len(candidates):
+        def CombSum(idx, arr, subseq_arr, target):
+            if idx == len(arr):
                 if target == 0:
                     result.append(subseq_arr[:])
                 return
 
-            if candidates[index] <= target:
-                subseq_arr.append(candidates[index])
-                combSum(index, candidates, target-candidates[index], subseq_arr)
+            if arr[idx] <= target:
+                #pickup
+                subseq_arr.append(arr[idx])
+                CombSum(idx, arr, subseq_arr, target-arr[idx])
                 subseq_arr.pop()
-            combSum(index+1, candidates, target, subseq_arr)
+
+            #don't pickup
+            CombSum(idx+1, arr, subseq_arr, target)
             return
-        combSum(0, candidates, target, [])
+        CombSum(0, candidates, [], target)
         return result
 
 
