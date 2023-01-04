@@ -1,25 +1,24 @@
 class Solution:
     def permuteUnique(self, nums: list[int]) -> list[list[int]]:
         result = []
-        visited = [False]*len(nums)
         nums.sort()
 
-        def permutationRecursion(nums, perm_arr):
-            if len(perm_arr) == len(nums):
-                result.append(perm_arr[:])
+        def Perm2(idx, nums):
+            if idx == len(nums):
+                result.append(nums)
                 return
-            
-            for i in range(0, len(nums)):
-                if visited[i] or (i > 0 and nums[i] == nums[i-1] and not visited[i-1]):
+
+            for i in range(idx, len(nums)):
+                if (i > idx) and (nums[i] == nums[idx]):
                     continue
-                perm_arr.append(nums[i])
-                visited[i] = True
-                permutationRecursion(nums, perm_arr)
-                perm_arr.pop()
-                visited[i] = False
-            
-        permutationRecursion(nums, [])
+                if i > idx:
+                    nums[i],nums[idx] = nums[idx],nums[i]
+                    Perm2(idx+1, nums[:])
+                elif i == idx:
+                    Perm2(idx+1, nums[:])
+            return
+        Perm2(0, nums)
         return result
 
-res = Solution().permuteUnique([1,1,1])
+res = Solution().permuteUnique([1,1,2])
 print(res)
