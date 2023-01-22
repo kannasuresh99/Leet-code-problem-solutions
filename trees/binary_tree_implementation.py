@@ -46,6 +46,29 @@ class Node:
         print(root.data)
         return
 
+    def levelOrderTraversal(self, root):
+        queue = [root]
+        result = list()
+
+        while queue != []:
+            print(queue)
+            next_queue = list()
+            current_level_result = list()
+            for root in queue:
+                print(root.data)
+                current_level_result.append(root.data)
+                if root.left:
+                    next_queue.append(root.left)
+                if root.right:
+                    next_queue.append(root.right)
+                
+            queue = next_queue
+            result.append(current_level_result)
+        print(result)
+        return result
+
+
+
 root = Node(8)
 root.insert(3)
 root.insert(10)
@@ -65,3 +88,8 @@ print("-------------------------------")
 print()
 print("Postorder Traversal")
 root.postOrderTraversal(root)
+print()
+print("-------------------------------")
+print()
+print("Levelorder Traversal")
+root.levelOrderTraversal(root)
