@@ -51,11 +51,9 @@ class Node:
         result = list()
 
         while queue != []:
-            print(queue)
             next_queue = list()
             current_level_result = list()
             for root in queue:
-                print(root.data)
                 current_level_result.append(root.data)
                 if root.left:
                     next_queue.append(root.left)
@@ -64,6 +62,22 @@ class Node:
                 
             queue = next_queue
             result.append(current_level_result)
+        print(result)
+        return result
+
+    def inOrderIterativeTraversal(self, root):
+        stack = []
+        result = []
+        curr_node = root
+
+        while curr_node or stack != []:
+            while curr_node:
+                stack.append(curr_node)
+                curr_node = curr_node.left
+            curr_node = stack.pop()
+            result.append(curr_node.data)
+            curr_node = curr_node.right
+
         print(result)
         return result
 
@@ -93,3 +107,8 @@ print("-------------------------------")
 print()
 print("Levelorder Traversal")
 root.levelOrderTraversal(root)
+print()
+print("-------------------------------")
+print()
+print("Inorder Iterative Traversal")
+root.inOrderIterativeTraversal(root)
