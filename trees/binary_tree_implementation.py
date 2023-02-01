@@ -81,6 +81,21 @@ class Node:
         print(result)
         return result
 
+    def preOrderIterativeTraversal(self, root):
+        stack = [root]
+        result = []
+
+        while stack != []:
+            curr = stack.pop()
+            result.append(curr.data)
+            if curr.right:
+                stack.append(curr.right)
+            if curr.left:
+                stack.append(curr.left)
+
+        print(result)
+        return result
+
 
 
 root = Node(8)
@@ -112,3 +127,8 @@ print("-------------------------------")
 print()
 print("Inorder Iterative Traversal")
 root.inOrderIterativeTraversal(root)
+print()
+print("-------------------------------")
+print()
+print("Preorder Iterative Traversal")
+root.preOrderIterativeTraversal(root)
