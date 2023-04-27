@@ -6,12 +6,11 @@
 #         self.right = right
 class Solution:
     def __init__(self):
-        self.max_depth = float('-inf')
+        self.min_path = float('inf')
 
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    def minDepth(self, root: Optional[TreeNode]) -> int:
         if root is None:
             return 0
-
         def helper(node, depth):
             if node is None:
                 return
@@ -20,10 +19,9 @@ class Solution:
             right = helper(node.right, depth+1)
 
             if left is None and right is None:
-                if depth > self.max_depth:
-                    self.max_depth = depth
-
+                if depth < self.min_path:
+                    self.min_path = depth
+            
             return depth
-
         helper(root, 1)
-        return self.max_depth
+        return self.min_path
