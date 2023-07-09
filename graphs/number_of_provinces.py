@@ -1,3 +1,7 @@
+from collections import defaultdict
+from typing import List
+
+
 class Solution:
     def dfs(self, node, visited, adjList):
         visited.add(node)
