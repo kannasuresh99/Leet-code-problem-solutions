@@ -45,4 +45,6 @@ class Solution:
 
 
         return number_of_enclaves
+    
+
         
