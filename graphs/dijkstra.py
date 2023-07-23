@@ -1,5 +1,9 @@
 from heapq import heapify, heappop, heappush
 
+"""
+Dijkstra algorithm does not work for graphs with negative weight edges, it'll create an infinite cycle
+"""
+
 class Solution:
 
     #Function to find the shortest distance of all the vertices
