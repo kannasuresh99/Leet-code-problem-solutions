@@ -1,7 +1,7 @@
 class DisJointSet:
     def __init__(self, n):
         self.rank = [0 for _ in range(n+1)]
-        self.size = [0 for _ in range(n+1)]
+        self.size = [1 for _ in range(n+1)]
         self.parent = [i for i in range(n+1)]
         
     def findUltimateParent(self, node):
@@ -51,19 +51,21 @@ class DisJointSet:
             return
             
 ds = DisJointSet(7)
-ds.unionByRank(1,2)
-ds.unionByRank(2,3)
-ds.unionByRank(4,5)
-ds.unionByRank(6,7)
-ds.unionByRank(5,6)
+# ds.unionByRank(1,2)
+# ds.unionByRank(2,3)
+# ds.unionByRank(4,5)
+# ds.unionByRank(6,7)
+# ds.unionByRank(5,6)
 
-ds.isBelongToSameComponent(3, 7)
+# ds.isBelongToSameComponent(3, 7)
 
-ds.unionByRank(3, 7)
+# ds.unionByRank(3, 7)
 
-ds.isBelongToSameComponent(3, 7)
+# ds.isBelongToSameComponent(3, 7)
 
-print()
+# print(ds.rank)
+
+# print()
 
 ds.unionBySize(1,2)
 ds.unionBySize(2,3)
@@ -76,3 +78,5 @@ ds.isBelongToSameComponent(3, 7)
 ds.unionBySize(3, 7)
 
 ds.isBelongToSameComponent(3, 7)
+
+print(ds.size)

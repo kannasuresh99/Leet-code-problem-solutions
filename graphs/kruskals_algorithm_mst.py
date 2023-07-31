@@ -53,7 +53,8 @@ class Solution:
         for i in range(V):
             for adj_node, wt in adj[i]:
                 edges.append([wt, [i, adj_node]])
-                
+        
+        #important step
         edges.sort(key=lambda x:x[0])
         
         ds = DisJointSet(V)

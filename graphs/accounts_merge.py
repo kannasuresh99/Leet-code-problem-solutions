@@ -2,7 +2,7 @@ from typing import List
 
 class DisJointSet:
     def __init__(self, n):
-        self.size = [0 for _ in range(n+1)]
+        self.size = [1 for _ in range(n+1)]
         self.parent = [i for i in range(n+1)]
 
     def find_ultimate_parent(self, node):
