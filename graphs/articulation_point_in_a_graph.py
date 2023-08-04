@@ -31,7 +31,7 @@ class Solution:
         if child > 1 and parent == -1:
             mark[node] = True
 
-    #Function to return Breadth First Traversal of given graph.
+
     def articulationPoints(self, V, adj):
         # code here
         tin = [0 for _ in range(V)]
