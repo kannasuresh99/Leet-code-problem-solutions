@@ -12,16 +12,16 @@ class Solution:
     
     def fibonacci_with_tabulation(self, n):
         dp = [None for _ in range(n+1)]
-        dp[0] = 1
+        dp[0] = 0
         dp[1] = 1
         
         for i in range(2, n+1):
             dp[i] = dp[i-1] + dp[i-2]
         
-        return dp[n-1]
+        return dp[n]
     
     def fibonacci_with_constant_space(self, n):
-        a = 1
+        a = 0
         b = 1
         
         for i in range(2, n+1):
@@ -29,7 +29,7 @@ class Solution:
             a = b
             b = c
         
-        return a
+        return c
 
 n = int(input("enter the nth sequence number: "))
 dp = [None for _ in range(n+1)]
