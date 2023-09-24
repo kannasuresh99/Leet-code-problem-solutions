@@ -1,7 +1,7 @@
 class Solution:
     def permuteUnique(self, nums: list[int]) -> list[list[int]]:
         result = []
-        nums.sort()
+        #nums.sort()
 
         def Perm2(idx, nums):
             if idx == len(nums):
@@ -20,5 +20,5 @@ class Solution:
         Perm2(0, nums)
         return result
 
-res = Solution().permuteUnique([1,1,2])
+res = Solution().permuteUnique(["foo", "bar", "work"])
 print(res)
