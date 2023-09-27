@@ -44,9 +44,12 @@ class LinkedList:
                 return
             current = current.next
             
-    def display(self):
+    def display(self, linked_list=None):
         node_list = []
         current = self.head
+        if linked_list:
+            current = linked_list
+        
         while current:
             node_list.append(current.data)
             current = current.next
@@ -141,7 +144,44 @@ class LinkedList:
             curr = next_node
         
         self.head = prev
+        
+    def find_middle_node(self):
+        slow = self.head
+        fast = self.head
+
+        while fast and fast.next:
+          slow = slow.next
+          fast = fast.next.next
+        
+        self.display(slow)
+        
+        return slow
     
+    def getNth(self, index):
+        count = 0
+        current = self.head
+        
+        while current:
+            if count == index:
+                return current.data
+            count += 1
+            current = current.next
+
+        return "Index greater than likedlist length"
+    
+    def find_nth_from_end(self, n):
+        slow = self.head
+        fast = self.head
+        
+        for _ in range(n):
+            if fast:
+                fast = fast.next
+        
+        while fast:
+            slow = slow.next
+            fast = fast.next
+        
+        return slow.data
     
 linked_list = LinkedList()
 linked_list.append(1)
@@ -171,3 +211,6 @@ linked_list.prepend(4)
 linked_list.append(0)
 linked_list.reverse()
 linked_list.display()
+linked_list.find_middle_node()
+print(linked_list.getNth(2))
+print(linked_list.find_nth_from_end(4))
