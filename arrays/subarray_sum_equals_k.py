@@ -12,8 +12,7 @@ class Solution:
 
         for i in range(0, len(nums)):
             prefix_sum += nums[i]
-            if prefix_sum - k in prefix_sum_dict:
-                res += prefix_sum_dict[prefix_sum - k]
+            res += prefix_sum_dict.get(prefix_sum - k, 0)
             prefix_sum_dict[prefix_sum] = prefix_sum_dict.get(prefix_sum, 0)+1
         
         return res
