@@ -17,3 +17,4 @@ class Solution:
         
         return res
 
+print(Solution().subarraySum([1,2,3,1,1,1], 3))
