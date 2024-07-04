@@ -18,3 +18,11 @@ def NToOne(N, i):
 print("N to 1")
 print("-----------")
 NToOne(50,1)
+
+class Solution:
+    def printNos(self,N):
+        if N == 1:
+            print(1)
+            return
+        self.printNos(N-1)
+        print(N)
