@@ -10,7 +10,7 @@ approach:
 
 from typing import List
 
-
+#sliding window approach
 class Solution:
     def maxFrequency(self, nums: List[int], k: int) -> int:
         l = 0
