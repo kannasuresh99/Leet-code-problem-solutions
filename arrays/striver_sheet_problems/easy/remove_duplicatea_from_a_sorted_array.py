@@ -9,6 +9,7 @@ class Solution:
                 continue
             nums[i+1] = nums[j]
             i += 1
+        return i
 
 nums = [1,1,1,2,2,3,3,3,3,3,4,4,4,4]
 res = Solution().removeDuplicates(nums)
