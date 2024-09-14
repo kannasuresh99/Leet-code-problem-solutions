@@ -1,5 +1,20 @@
 """
 longest subarray with sum k with negative numbers
+
+Thought process behind the solution:
+    - If the length of a subarray is equal to x, and our target sum is k
+    - If we have a prefix sum of y at index i, and we have a prefix sum of y-k at index j
+    - Then the sum of the subarray from j+1 to i will be equal to k
+    - We can use this property to solve this problem
+
+Algorithm:
+    - We can use prefix sum to solve this problem
+    - We can use hashmap to store the prefix sum and the index at which it occured
+    - We can iterate through the array and calculate the prefix sum
+    - If the prefix sum is equal to k, we can update the max_len to max(max_len, i+1)
+    - If the prefix sum-k is in the hashmap, we can update the max_len to max(max_len, i-prefix_sum_hashmap[prefix_sum-k])
+    - If the prefix sum is not in the hashmap, we can add the prefix sum to the hashmap
+    - Finally, we can return the max_len
 """
 
 class Solution:
