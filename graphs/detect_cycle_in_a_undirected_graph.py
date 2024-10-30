@@ -30,6 +30,11 @@ class Solution:
                     return True
         
         return False
+
+res = Solution()
+print(res.isCycle(4, [[1,2],[2,3],[3,4],[4,1]])) #True
+#negatives
+print(res.isCycle(4, [[1,2],[2,3],[3,4]])) #False
     
 
 #DFS solution
